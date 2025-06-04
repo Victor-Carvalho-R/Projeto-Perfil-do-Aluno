@@ -1,0 +1,80 @@
+/* 
+
+global
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+}
+
+/*
+
+nav
+
+*/
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: rgb(77, 48, 77);
+}
+
+nav .nav_brand {
+    margin-right : 1rem;
+}
+
+nav .nav_content {
+    margin-left: 1rem;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+} 
+
+/* 
+
+general_container
+
+*/
+
+.general_container {
+    display: flex;
+}
+
+.general_container aside {
+    flex: 0.6;
+    background-color: rgb(129, 104, 129);
+}
+
+.general_container .content_container {
+    flex: 8;
+}
+
+/* 
+
+content_container
+
+*/
+
+.content_container {
+    display: flex;
+}
+
+.content_container .index {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(184, 168, 184);
+    padding: 2rem;
+}
