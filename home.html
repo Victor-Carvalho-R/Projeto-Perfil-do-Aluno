@@ -8,44 +8,117 @@
 </head>
 <body>
     <nav>
-        <div class="nav_brand">Victor Carvalho</div>
+        <div class="nav_brand"><img src="./static/images/foto-perfil-2.jpeg" alt="">Victor Carvalho</div>
         <div class="nav_content">
-            <p>Contato</p>
-            <a href="https://www.linkedin.com/in/victor-carvalho-60291a311">Linkedin</a>
-            <p>Email: victorcarvalhor112@gmail.com</p>
+            <p>Contato:</p>
+            <a href="https://www.linkedin.com/in/victor-carvalho-60291a311"><img src="./static/images/linkedin-logo.webp" alt=""></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqTgMwPSfzBCfFldgPnSFMXCcQRVQPDGlgCQMNzSwCWbHNxxjmhZCjmnvtTHsSHkCZdzdq"><img src="./static/images/email-icon.png" alt=""></a>
+            <p>victorcarvalhor112@gmail.com</p>
         </div>
     </nav>
     <div class="general_container">
         <aside></aside>
         <div class="content_container">
-            <div class="index">
-                <a href="/">1. Sobre mim</a>
-                <a href="/">2. Vida profissional/acadêmica</a>
-                <a href="/">3. UCs Cursadas</a>
-            </div>
-            <div class="main_content">
+            <div class="section s1">
                 <h1>Fase 1</h1>
-                <img src="./static/images/foto-perfil.jpeg" alt="foto de perfil">
-                <p>Nome: Victor Carvalho Ribeiro Barbosa</p>
-                <p>RA: 324133336</p>
-                <p>Endereço: Belo Horizonte, MG</p>
-                <h2>Sobre mim</h2>
-                <p>Me chamo Victor, moro com meus pais e minha irmã mais nova, com quem eu tenho uma relação muito</p>
-                <p>boa. Gosto de estudar sobre TI, principalmente sobre infra e hardware e software em mais baixo</p>
-                <p>nível, tanto que estou lendo um livro chamado "Introdução a Arquitetura de Computadores", o qual</p>
-                <p>eu estou adorando. Gosto muito de jogar de tudo um pouco e faço ao menos uma vez por semana uma</p>
-                <p>hora de caminhada. Estou começando a me preocupar mais com relação a exercício físico.</p>
-                <h2>Vida profissional/acadêmica</h2>
-                <p>Fiz os 9 anos do ensino fundamental em uma escola pública, a Escola Estadual Professor Bolivar de Freitas.</p>
-                <p>Passei os 3 anos do ensino médio como bolsista no Colégio Santa Maria Minas</p>
-                <p>Após a escola, em 2023, fiz os cursos de Python, SQL, HTML e CSS da Hashtag Treinamentos</p>
-                <p>Parte pelos cursos, fui contratado como jovem aprendiz em uma vaga de DevOps no final de 2023</p>
-                <p>Por causa do trabalho, Comecei a cursar Ciências da Computação. Estou no terceiro período.</p>
-                <p>Após um ano na empresa, mudei o contrato para estágio e tenho altas chances de contratação no fim desse ano</p>
-                <h2>UCs Cursadas</h2>
-                <p>Primeiro Período: Programação                           -   Modelagem de Software</p>
-                <p>Segundo Período:  Sistemas Computacionais e Segurança   -   Redes e Segurança</p>
-                <p>Terceiro período: Sistemas Distribuídos                 -   Desenvolvimento Web e Usabilidade</p>
+                <div class="introduction">
+                    <div class="introduction-info">
+                        <div class="photos">
+                            <input type="radio" name="profile" id="photo1" checked>
+                            <input type="radio" name="profile" id="photo2">
+                            <input type="radio" name="profile" id="photo3">
+                            <div class="main-photo">
+                                <img src="./static/images/foto-perfil-1.jpeg" class="img1">
+                                <img src="./static/images/foto-perfil-2.jpeg" class="img2">
+                                <img src="./static/images/foto-perfil-3.jpeg" class="img3">
+                            </div>
+                            <div class="choose">
+                                <label for="photo1"><img src="./static/images/foto-perfil-1.jpeg" alt="Foto 1"></label>
+                                <label for="photo2"><img src="./static/images/foto-perfil-2.jpeg" alt="Foto 2"></label>
+                                <label for="photo3"><img src="./static/images/foto-perfil-3.jpeg" alt="Foto 3"></label>
+                            </div>
+                        </div>
+                        <div class="text-info">
+                            <p>Nome: Victor Carvalho Ribeiro Barbosa</p>
+                            <p>RA: 324133336</p>
+                            <p>Endereço: Belo Horizonte, MG</p>
+                        </div>
+                    </div>
+                    <div class="index">
+                        <h2>Índices</h2>
+                        <a href="./home.html#sobre-mim">1. Sobre mim</a>
+                        <a href="./home.html#vida-prof-acad">2. Vida profissional e acadêmica</a>
+                        <a href="./home.html#ucs">3. UCs Cursadas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section s2">
+                <h2 id="sobre-mim">Sobre mim</h2>
+                <p>
+                    Me chamo Victor, moro com meus pais e minha irmã mais nova, com quem eu tenho uma relação muito
+                    boa. Gosto de estudar sobre TI, principalmente sobre infra e hardware e software em mais baixo
+                    nível, tanto que estou lendo um livro chamado "Introdução a Arquitetura de Computadores", o qual
+                    eu estou adorando. Gosto muito de jogar de tudo um pouco e faço ao menos uma vez por semana uma
+                    hora de caminhada. Estou começando a me preocupar mais com relação a exercício físico.
+                </p>
+            </div>
+            <div class="section s3">
+                <h2 id="vida-prof-acad">Vida profissional/acadêmica</h2>
+                <ul>
+                    <li>
+                        <p>Fiz os 9 anos do ensino fundamental em uma escola pública, a Escola Estadual Professor Bolivar de Freitas.</p>
+                    </li>
+                    <img src="./static/images/bolivar.jpg" alt="bolivar">
+                    <li>
+                        <p>Passei os 3 anos do ensino médio como bolsista no Colégio Santa Maria Minas</p>
+                    </li>
+                    <img src="./static/images/santa-maria.webp" alt="santa maria">
+                    <li>
+                        <p>Após a escola, em 2023, fiz os cursos de Python, SQL, HTML e CSS da Hashtag Treinamentos</p>
+                    </li>
+                    <div class="courses-icons">
+                        <img src="./static/images/python-logo.png" alt="python">
+                        <img src="./static/images/html-css.png" alt="html-css">
+                        <img src="./static/images/sql-icon.png" alt="sql">
+                    </div>
+                    <li>
+                        <p>Parte pelos cursos, fui contratado como jovem aprendiz em uma vaga de DevOps no final de 2023</p>
+                    </li>
+                    <img src="./static/images/devops-icon.png" alt="devops">
+                    <li>
+                        <p>Por causa do trabalho, Comecei a cursar Ciências da Computação. Estou no terceiro período.</p>
+                    </li>
+                    <img src="./static/images/ciencia-da-computacao.webp" alt="ciencias-computacao">
+                    <li>
+                        <p>Após um ano na empresa, mudei o contrato para estágio e tenho boas chances de contratação no fim desse ano</p>
+                    </li>
+                    <img src="./static/images/devops-icon.png" alt="devops">
+                </ul>
+            </div>
+            <div class="section s4">
+                <h2 id="ucs">UCs Cursadas</h2>
+                <table>
+                    <tr>
+                        <th>Período</th>
+                        <th>Unidade Curricular 1</th>
+                        <th>Unidade Curricular 2</th>
+                    </tr>
+                    <tr>
+                        <td>1º</td>
+                        <td>Programação e Soluções Computacionais</td>
+                        <td>Modelagem de Software</td>
+                    </tr>
+                    <tr>
+                        <td>2º</td>
+                        <td>Sistemas Computacionais e Segurança</td>
+                        <td>Redes e Segurança</td>
+                    </tr>
+                    <tr>
+                        <td>3º</td>
+                        <td>Sistemas Distribuídos</td>
+                        <td>Desenvolvimento Web e Usabilidade</td>
+                    </tr>
+                </table>
             </div>
         </div>
         <aside></aside>
