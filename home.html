@@ -157,7 +157,7 @@
                     <input id="cpf-content" type="text" placeholder="000.000.000-00" onblur="verificar_cpf()">
                     <label>Email</label>
                     <input id="email-content" type="email" placeholder="seu@email.com" onblur="verificar_email()">
-                    <input class="submit-edit" type="submit" onclick="submit_edit()">
+                    <input class="submit-edit" type="submit" onclick="submit_edit(event)">
                 </form>
             </div>
         </div>
@@ -168,7 +168,7 @@
                 <form class="form-sobre-mim">
                     <plabel>Descrição</plabel>
                     <input id="description-content" placeholder="Sobre mim..."></input>
-                    <input type="submit" onclick="submit_add()">
+                    <input type="submit" onclick="submit_add(event)">
                 </form>
             </div>
         </div>

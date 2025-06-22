@@ -9,11 +9,7 @@ function verificar_email() {
     const idx_ponto = email_content.indexOf('.')
     if (idx_arroba < 1 || idx_ponto <= (idx_arroba + 1) || idx_ponto === email_content.length - 1) {
         email.classList.add("form-error")
-        document.querySelector('.submit-edit').style.display = 'none';
-    } else {
-        email.classList.remove("form-error");
-        document.querySelector('.submit-edit').style.display = 'initial';
-    }
+    } else {email.classList.remove("form-error");}
 }
 
 function verificar_cpf() {
@@ -23,11 +19,7 @@ function verificar_cpf() {
     // verifica o traço no final
     if (cpf_content[cpf_content.length - 3] === '-') {
         cpf.classList.remove("form-error");
-        document.querySelector('.submit-edit').style.display = 'initial';
-    } else {
-        cpf.classList.add("form-error")
-        document.querySelector('.submit-edit').style.display = 'none';
-    }
+    } else {cpf.classList.add("form-error")}
 
     // verifica se tem ponto
     if (cpf_content.includes('.')) {
@@ -36,23 +28,15 @@ function verificar_cpf() {
             if (cpf_content[i] === '.') {
                 if ((i + 1) % 4 != 0 && i < 8) {
                     cpf.classList.add("form-error")
-                    document.querySelector('.submit-edit').style.display = 'none';
-                } else {
-                    cpf.classList.remove("form-error");
-                    document.querySelector('.submit-edit').style.display = 'initial';
-                }   
+                } else {cpf.classList.remove("form-error");} 
             }
 
             // verifica se há outro caractere que não numérico
             if (!'.-0123456789'.includes(cpf_content[i])) {
                 cpf.classList.add("form-error")
-                document.querySelector('.submit-edit').style.display = 'none';
             }
         }
-    } else {
-        cpf.classList.add("form-error")
-        document.querySelector('.submit-edit').style.display = 'none';
-    }
+    } else {cpf.classList.add("form-error")}
 }
 
 function adicionar_periodo() {
@@ -103,7 +87,8 @@ function fechar_popup() {
     document.querySelector('.popup-form-add').style.display = 'none';
 }
 
-function submit_edit() {
+function submit_edit(event) {
+    event.preventDefault();
     const cpf = document.querySelector('#cpf');
     const email = document.querySelector('#email');
     const cpf_content = 'CPF: ' + document.querySelector('#cpf-content').value;
@@ -111,22 +96,21 @@ function submit_edit() {
     
     cpf.textContent = cpf_content;
     email.textContent = email_content;
+    alert('a')
     document.querySelector('.popup-form-edit').style.display = 'none';
 }
 
-function submit_add() {
+function submit_add(event) {
+    event.preventDefault();
     const s2_description = document.querySelector('.s2-description');
     const p = document.createElement('p');
     const hr = document.createElement('hr');
     const description_content = document.querySelector('#description-content').value;
 
-    // p.textContent = description_content;
     p.textContent = description_content;
     s2_description.appendChild(hr);
     s2_description.appendChild(p);
-    setTimeout(() => {
-        document.querySelector('.popup-form-add').style.display = 'none';
-    }, 100);
+    document.querySelector('.popup-form-add').style.display = 'none';
     
 }
 
