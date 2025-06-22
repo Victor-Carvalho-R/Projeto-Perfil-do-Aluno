@@ -162,16 +162,18 @@ div.section.s1 div.introduction div.index {
     border: 2px solid #000000;
     border-radius: 15px;
     padding: 1.8rem;
-    background-color: #eff2ff;
+    background-color: #f2efff;
 }
 
 div.section.s1 div.introduction-info {
     display: flex;
+    position: relative;
+    
 }
 
 /*
 
-photos
+section 1 photos
 
 */
 
@@ -224,9 +226,40 @@ div.photos .main-photo img {
     border-color: #7547c08f;
 }
 
+/* 
+
+section 1 text-info
+
+*/
+
+div.section.s1 div.introduction-info div.text-info-container {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 div.section.s1 div.introduction-info div.text-info {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: 2px solid #2e2e2e;
+    background-color: #f2efff;
+    border-radius: 1rem;
+    padding: 2rem;
     align-content: end;
-    margin: 1rem;
+}
+
+div.section.s1 div.introduction-info div.text-info button {
+    padding: 1rem;
+    margin-top: 1.6rem;
+    border: 2px solid #2e2e2e;
+    border-radius: 1rem;
+    background-color: #f2efff;
+    font-size: 1.5rem;
+    box-shadow: 0 0 0.5rem  #452e8b;
+}
+
+div.section.s1 div.introduction-info div.text-info button:hover {
+    background-color: #e3dcff;
+    box-shadow: 0 0 0;
 }
 
 /*
@@ -235,8 +268,20 @@ section 2
 
 */
 
-div.section.s2 {
+div.section.s2 button {
+    padding: 1rem;
+    margin-top: 1.6rem;
+    border: 2px solid #2e2e2e;
+    border-radius: 1rem;
+    background-color: #f2efff;
+    font-size: 1.5rem;
+    box-shadow: 0 0 0.5rem  #452e8b;
+}
 
+div.section.s2 hr {
+    border-color: #000000;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 /*
@@ -276,7 +321,7 @@ section 4
 */
 
 div.section.s4 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     font-size: 1.5rem;
     text-align: left;
@@ -303,8 +348,155 @@ div.section.s4 table * {
 div.section.s4 table td:first-child{
     font-weight: bold;
 }
+
+div.section.s4 table td:last-child{
+    align-items: center;
+    justify-content: center;
+}
     
 div.section.s4 table th {
     background-color: #444175;
     color: #ffffff;
+}
+
+div.section.s4 button {
+    padding: 1rem;
+    margin-top: 1.6rem;
+    border: 2px solid #2e2e2e;
+    border-radius: 1rem;
+    background-color: #f2efff;
+    font-size: 1.5rem;
+    box-shadow: 0 0 0.5rem  #452e8b;
+}
+
+div.section.s4 button:hover {
+    background-color: #e3dcff;
+    box-shadow: 0 0 0;
+}
+
+div.row {
+    display: flex;
+}
+
+/* 
+
+popup_form_edit
+
+*/
+
+div.popup-form-edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c0;
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+div.popup-form-edit div.popup-form-container {
+    border: 3px solid black;
+    border-radius: 2rem;
+    background-color: #f2efff;
+    box-shadow: 0 0 1rem  #2a1c55;
+    padding: 4rem;
+    position: relative;
+}
+
+form.form-introduction {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+form input {
+    width: 60%;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    
+}
+
+form input:last-child {
+    margin-top: 1.5rem;
+    width: 16rem;
+    background-color: #9eff919c;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.5rem #1c55289d;
+}
+
+form input:last-child:hover {
+    background-color: #59ca4a9c;
+    box-shadow: 0 0 0;
+}
+
+form label {
+    margin-top: 1rem;
+}
+
+button.close-popup {
+    align-items: center;
+    font-weight: bold;
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    justify-content: end;
+    border: 2px solid black;
+    padding: 0.6rem;
+    border-radius: 20rem;
+    box-shadow: 0 0 0.5rem  #2a1c55;
+}
+
+button.close-popup:hover {
+    background-color: #e3dcff;
+    box-shadow: 0 0 0;
+}
+
+/* 
+
+popup-form-add
+
+*/
+
+div.popup-form-add {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000c0;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.popup-form-add div.popup-form-container {
+    border: 3px solid black;
+    border-radius: 2rem;
+    background-color: #f2efff;
+    box-shadow: 0 0 1rem  #2a1c55;
+    padding: 4rem;
+    position: relative;
+}
+
+form.form-sobre-mim {
+    display: flex;
+    flex-direction: column;
+}
+
+input.form-error {
+    color: red;
+    background-color: rgba(255, 0, 0, 0.342);
+    border-color: red;
+}
+
+input.submit-edit {
+    display: initial;
 }

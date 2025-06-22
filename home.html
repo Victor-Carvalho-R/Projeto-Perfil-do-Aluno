@@ -38,10 +38,15 @@
                                 <label for="photo3"><img src="./static/images/foto-perfil-3.jpeg" alt="Foto 3"></label>
                             </div>
                         </div>
-                        <div class="text-info">
-                            <p>Nome: Victor Carvalho Ribeiro Barbosa</p>
-                            <p>RA: 324133336</p>
-                            <p>Endereço: Belo Horizonte, MG</p>
+                        <div class="text-info-container">
+                            <div class="text-info">
+                                <p>Nome: Victor Carvalho Ribeiro Barbosa</p>
+                                <p>RA: 324133336</p>
+                                <p>Endereço: Belo Horizonte, MG</p>
+                                <p id="cpf" >CPF: 021.647.476-07</p>
+                                <p id="email">Email: victorcarvalhor112@gmail.com</p>
+                                <button onclick="editar_info_pessoal()">Editar</button>
+                            </div>
                         </div>
                     </div>
                     <div class="index">
@@ -54,13 +59,16 @@
             </div>
             <div class="section s2">
                 <h2 id="sobre-mim">Sobre mim</h2>
-                <p>
-                    Me chamo Victor, moro com meus pais e minha irmã mais nova, com quem eu tenho uma relação muito
-                    boa. Gosto de estudar sobre TI, principalmente sobre infra e hardware e software em mais baixo
-                    nível, tanto que estou lendo um livro chamado "Introdução a Arquitetura de Computadores", o qual
-                    eu estou adorando. Gosto muito de jogar de tudo um pouco e faço ao menos uma vez por semana uma
-                    hora de caminhada. Estou começando a me preocupar mais com relação a exercício físico.
-                </p>
+                <div class="s2-description">
+                    <p>
+                        Me chamo Victor, moro com meus pais e minha irmã mais nova, com quem eu tenho uma relação muito
+                        boa. Gosto de estudar sobre TI, principalmente sobre infra e hardware e software em mais baixo
+                        nível, tanto que estou lendo um livro chamado "Introdução a Arquitetura de Computadores", o qual
+                        eu estou adorando. Gosto muito de jogar de tudo um pouco e faço ao menos uma vez por semana uma
+                        hora de caminhada. Estou começando a me preocupar mais com relação a exercício físico.
+                    </p>
+                </div>
+                <button onclick="add_descricao()">Adicionar descrição</button>
             </div>
             <div class="section s3">
                 <h2 id="vida-prof-acad">Vida profissional/acadêmica</h2>
@@ -98,30 +106,73 @@
             <div class="section s4">
                 <h2 id="ucs">UCs Cursadas</h2>
                 <table>
-                    <tr>
-                        <th>Período</th>
-                        <th>Unidade Curricular 1</th>
-                        <th>Unidade Curricular 2</th>
-                    </tr>
-                    <tr>
-                        <td>1º</td>
-                        <td>Programação e Soluções Computacionais</td>
-                        <td>Modelagem de Software</td>
-                    </tr>
-                    <tr>
-                        <td>2º</td>
-                        <td>Sistemas Computacionais e Segurança</td>
-                        <td>Redes e Segurança</td>
-                    </tr>
-                    <tr>
-                        <td>3º</td>
-                        <td>Sistemas Distribuídos</td>
-                        <td>Desenvolvimento Web e Usabilidade</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Período</th>
+                            <th>Unidade Curricular 1</th>
+                            <th>Unidade Curricular 2</th>
+                            <th>Ordem</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1º</td>
+                            <td>Programação e Soluções Computacionais</td>
+                            <td>Modelagem de Software</td>
+                            <td>
+                                <button onclick="mudar_ordem(this, -1)">▲</button>
+                                <button onclick="mudar_ordem(this, 1)">▼</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2º</td>
+                            <td>Sistemas Computacionais e Segurança</td>
+                            <td>Redes e Segurança</td>
+                            <td>
+                                <button onclick="mudar_ordem(this, -1)">▲</button>
+                                <button onclick="mudar_ordem(this, 1)">▼</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3º</td>
+                            <td>Sistemas Distribuídos</td>
+                            <td>Desenvolvimento Web e Usabilidade</td>
+                            <td>
+                                <button onclick="mudar_ordem(this, -1)">▲</button>
+                                <button onclick="mudar_ordem(this, 1)">▼</button>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
+                <button onclick="adicionar_periodo()">Adicionar Periodo</button>
             </div>
         </div>
         <aside></aside>
+        <div class="popup-form-edit">
+            <div class="popup-form-container">
+                <button onclick="fechar_popup()" class="close-popup">X</button>
+                <h2>Editar informaçoes pessoais</h2>
+                <form class="form-introduction">
+                    <label>CPF</label>
+                    <input id="cpf-content" type="text" placeholder="000.000.000-00" onblur="verificar_cpf()">
+                    <label>Email</label>
+                    <input id="email-content" type="email" placeholder="seu@email.com" onblur="verificar_email()">
+                    <input class="submit-edit" type="submit" onclick="submit_edit()">
+                </form>
+            </div>
+        </div>
+        <div class="popup-form-add">
+            <div class="popup-form-container">
+                <button onclick="fechar_popup()" class="close-popup">X</button>
+                <h2>Adicionar Texto Sobre Mim</h2>
+                <form class="form-sobre-mim">
+                    <plabel>Descrição</plabel>
+                    <input id="description-content" placeholder="Sobre mim..."></input>
+                    <input type="submit" onclick="submit_add()">
+                </form>
+            </div>
+        </div>
     </div>
+    <script src="./static/script.js"></script>
 </body>
 </html>
